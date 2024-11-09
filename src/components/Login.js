@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { auth, provider, signInWithPopup } from "../firebaseConfig";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -16,8 +17,18 @@ function Login() {
     setErrors(formErrors);
 
     if (Object.keys(formErrors).length === 0) {
-      // Xử lý đăng nhập ở đây (ví dụ: gửi yêu cầu API)
       alert("Form submitted successfully");
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Logged in as:", user.displayName);
+      // Chuyển hướng người dùng hoặc xử lý logic đăng nhập tiếp theo
+    } catch (error) {
+      console.error("Google login error:", error.message);
     }
   };
 
@@ -54,22 +65,15 @@ function Login() {
               Login
             </button>
           </div>
-          <div className="text-center mt-8 text-base">
-            Don't have an account?{" "}
-            <a href="signup" className="text-red-500">
-              Create an account.
-            </a>
-          </div>
-
           <div className="flex items-center my-4">
             <div className="flex-1 h-px bg-gray-300"></div>
             <div className="mx-4 text-black font-medium">or</div>
             <div className="flex-1 h-px bg-gray-300"></div>
           </div>
-
           <div className="text-center">
             <button
               type="button"
+              onClick={handleGoogleLogin}
               className="w-full py-3 bg-white text-black border-2 border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center justify-center gap-4"
             >
               <svg
