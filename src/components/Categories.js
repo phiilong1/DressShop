@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Categories() {
     return (
         <div className="mt-7 px-4 sm:px-9">
@@ -5,12 +7,14 @@ function Categories() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
                 
                 <div className="relative border border-gray-300 p-4 flex items-center justify-center h-54 sm:h-auto">
-                    <img
-                        src="https://res.cloudinary.com/djlbfjouc/image/upload/v1582274091/ezgif.com-webp-to-jpg_l9flc0.jpg"
-                        alt="Women"
-                        className="object-cover w-full h-full"
-                    />
-                    <span className="absolute text-lg sm:text-2xl font-bold text-black top-4 left-4">WOMEN</span>
+                    <Link to="/categories-women">
+                        <img
+                            src="https://res.cloudinary.com/djlbfjouc/image/upload/v1582274091/ezgif.com-webp-to-jpg_l9flc0.jpg"
+                            alt="Women"
+                            className="object-cover w-full h-full"
+                        />
+                        <span className="absolute text-lg sm:text-2xl font-bold text-black top-4 left-4">WOMEN</span>
+                    </Link>
                 </div>
                 
                 <div className="relative border border-gray-300 p-4 flex items-center justify-center h-54 sm:h-auto">
