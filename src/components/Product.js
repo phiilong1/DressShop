@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 function Product() {
     const products = [
         { name: "Long Sleeves Polka Dots", price: "P900", image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },

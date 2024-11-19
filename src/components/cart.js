@@ -1,8 +1,10 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { CartContext } from './cartcontext';
 
 function Cart() {
     const { cart, removeFromCart } = useContext(CartContext);
+    const navigate = useNavigate(); // Khởi tạo navigate
 
     const calculateTotal = () => {
         return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -50,7 +52,10 @@ function Cart() {
                         <p className="font-semibold mr-4">
                             Sub Total <span className="text-red-500 ml-2">{calculateTotal()}</span>
                         </p>
-                        <button className="px-6 py-2 bg-black text-white font-medium rounded hover:bg-gray-800">
+                        <button
+                            className="px-6 py-2 bg-black text-white font-medium rounded hover:bg-gray-800"
+                            onClick={() => navigate('/checkout')} // Điều hướng sang trang CheckOut
+                        >
                             Check Out
                         </button>
                     </div>
