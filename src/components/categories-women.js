@@ -13,9 +13,13 @@ function CategoriesWomen() {
 
     const products = [
         { id: 1, name: "Long Sleeves Polka Dots", price: 900, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { id: 2, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { id: 3, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { id: 4, name: "White Long Sleeves", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
+        { id: 2, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157817%2Fkx5kld8ndqqpfqemslc2.jpg&w=1080&q=75" },
+        { id: 3, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157717%2Fz9pytwztom7gj2dri1tb.jpg&w=1080&q=75" },
+        { id: 4, name: "White Long Sleeves", price: 1800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
+        { id: 5, name: "White Long Sleeves", price: 600, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
+        { id: 6, name: "White Long Sleeves", price: 300, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156257%2Fndixpyvh4goiegf8c3ws.jpg&w=1080&q=75" },
+        { id: 7, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156228%2Fbumiptjx37aqwkez2x4o.jpg&w=1080&q=75" },
+        { id: 8, name: "White Long Sleeves", price: 500, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156196%2Fhefaqrcrdhxmabag1ozl.jpg&w=1080&q=75" },
     ];
 
     // Sắp xếp danh sách sản phẩm dựa trên sortOption
