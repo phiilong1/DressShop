@@ -14,13 +14,11 @@ export function CartProvider({ children }) {
 
     const addToCart = (product, quantity) => {
         setCart((prevCart) => {
-            const existingProduct = prevCart.find((item) => item.id === product.id);
-            if (existingProduct) {
-                return prevCart.map((item) =>
-                    item.id === product.id
-                        ? { ...item, quantity: item.quantity + quantity }
-                        : item
-                );
+            const existingProductIndex = prevCart.findIndex((item) => item.id === product.id);
+            if (existingProductIndex !== -1) {
+                const updatedCart = [...prevCart];
+                updatedCart[existingProductIndex].quantity += quantity;
+                return updatedCart;
             } else {
                 return [...prevCart, { ...product, quantity }];
             }

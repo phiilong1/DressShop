@@ -18,12 +18,14 @@ function Categories() {
                 </div>
                 
                 <div className="relative border border-gray-300 p-4 flex items-center justify-center h-54 sm:h-auto">
+                    <Link to="/categories-men">
                     <img
                         src="https://res.cloudinary.com/djlbfjouc/image/upload/v1582274252/categ-02_pqpnm7.jpg"
                         alt="Men"
                         className="object-cover w-full h-full"
                     />
                     <span className="absolute text-lg sm:text-2xl font-bold text-black top-4 left-4">MEN</span>
+                    </Link>
                 </div>
             </div>
         </div>

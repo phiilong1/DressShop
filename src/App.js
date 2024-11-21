@@ -12,6 +12,7 @@ import ProductDetails from './components/product-details';
 import Cart from './components/cart';
 import { CartProvider } from './components/cartcontext';
 import CheckOut from './components/checkout';
+import CategoriesMen from './components/categories-men';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                             }
                         />
                         <Route path="/categories-women" element={<CategoriesWomen />} />
+                        <Route path="/categories-men" element={<CategoriesMen/>}/>
                         <Route path="/product-details" element={<ProductDetails />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/checkout" element={<CheckOut />} />

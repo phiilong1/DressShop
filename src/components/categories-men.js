@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function CategoriesWomen() {
+function CategoriesMen() {
     const [sortOption, setSortOption] = useState("Price");
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
@@ -12,17 +12,14 @@ function CategoriesWomen() {
     };
 
     const products = [
-        { id: 1, name: "Long Sleeves Polka Dots", price: 900, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { id: 2, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157817%2Fkx5kld8ndqqpfqemslc2.jpg&w=1080&q=75" },
-        { id: 3, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157717%2Fz9pytwztom7gj2dri1tb.jpg&w=1080&q=75" },
-        { id: 4, name: "White Long Sleeves", price: 1800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
-        { id: 5, name: "White Long Sleeves", price: 600, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
-        { id: 6, name: "White Long Sleeves", price: 300, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156257%2Fndixpyvh4goiegf8c3ws.jpg&w=1080&q=75" },
-        { id: 7, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156228%2Fbumiptjx37aqwkez2x4o.jpg&w=1080&q=75" },
-        { id: 8, name: "White Long Sleeves", price: 500, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156196%2Fhefaqrcrdhxmabag1ozl.jpg&w=1080&q=75" },
+        { id: 1, name: "Classic Black Suit", price: 2000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 2, name: "Casual Denim Jacket", price: 1200, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1582456742%2Flongsleeves-hershel_mampai.jpg&w=1080&q=75" },
+        { id: 3, name: "Formal White Shirt", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
+        { id: 4, name: "Sporty Grey Hoodie", price: 1000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
+        { id: 5, name: "Blue Jeans", price: 600, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 6, name: "Brown Leather Shoes", price: 1500, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
     ];
 
-    // Sắp xếp danh sách sản phẩm dựa trên sortOption
     const sortedProducts = [...products].sort((a, b) => {
         if (sortOption === "Low to High") return a.price - b.price;
         if (sortOption === "High to Low") return b.price - a.price;
@@ -32,20 +29,22 @@ function CategoriesWomen() {
     const handleProductClick = (product) => {
         navigate(`/product-details`, { state: { product } });
     };
-    const navigateTomen = () => {
-        navigate("/categories-men");
+
+    const navigateToWomen = () => {
+        navigate("/categories-women");
     };
 
     return (
         <div className="bg-gray-100 rounded-sm py-6 px-4 sm:px-10 mt-6 ml-4 mr-4">
             <div className="flex flex-wrap items-center justify-between space-y-2 sm:space-y-0">
                 <div className="space-x-4">
-                    <button onClick={navigateTomen}
-                    className="bg-gray-200 text-black text-lg sm:text-2xl font-semibold px-3 py-2 rounded-md focus:outline-none">
+                    <button className="bg-red-600 text-white text-lg sm:text-2xl font-semibold px-3 py-2 rounded-md focus:outline-none">
                         Men
                     </button>
-                    <button 
-                    className="bg-red-600 text-white text-lg sm:text-2xl font-semibold px-3 py-2 rounded-md focus:outline-none">
+                    <button
+                        onClick={navigateToWomen}
+                        className="bg-gray-200 text-black text-lg sm:text-2xl font-semibold px-3 py-2 rounded-md focus:outline-none"
+                    >
                         Women
                     </button>
                 </div>
@@ -109,4 +108,4 @@ function CategoriesWomen() {
     );
 }
 
-export default CategoriesWomen;
+export default CategoriesMen;

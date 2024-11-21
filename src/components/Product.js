@@ -1,19 +1,28 @@
 import { useNavigate } from 'react-router-dom';
 
 function Product() {
+    const navigate = useNavigate(); // Hook để chuyển trang
     const products = [
-        { name: "Long Sleeves Polka Dots", price: "P900", image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { name: "Brown Jacket", price: "P800", image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
-        { name: "Sleeveless Shirt", price: "P400", image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
-        { name: "White Long Sleeves", price: "P700", image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" }
+        { id: 1, name: "Long Sleeves Polka Dots", price: 900, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
+        { id: 2, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
+        { id: 3, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
+        { id: 4, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" }
     ];
+
+    const handleProductClick = (product) => {
+        navigate('/product-details', { state: { product } }); // Chuyển đến trang chi tiết sản phẩm
+    };
 
     return (
         <div className="mt-7 px-4 sm:px-9">
             <h1 className="text-2xl font-bold sm:text-3xl">PRODUCT OVERVIEW</h1>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
                 {products.map((product, index) => (
-                    <div key={index} className="relative group">
+                    <div 
+                        key={index} 
+                        className="relative group cursor-pointer" 
+                        onClick={() => handleProductClick(product)} // Thêm sự kiện click
+                    >
                         <img 
                             src={product.image} 
                             alt={product.name} 
@@ -26,7 +35,7 @@ function Product() {
                         </div>
                         <div className="mt-4">
                             <h2 className="text-lg font-semibold">{product.name}</h2>
-                            <p className="text-red-500 font-bold">{product.price}</p>
+                            <p className="text-red-500 font-bold">P{product.price}</p> {/* Hiển thị đúng giá */}
                         </div>
                     </div>
                 ))}
