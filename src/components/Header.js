@@ -8,7 +8,7 @@ function Header() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     return ( 
-        <header className="flex items-center justify-between p-7 border-b border-gray-200 shadow-md">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white flex items-center justify-between p-7 border-b border-gray-200 shadow-md">
             <a href="/" className="text-xl sm:text-3xl font-semibold pl-2 sm:pl-5">Dress</a>
             
             <div className="flex items-center space-x-4 sm:space-x-10">

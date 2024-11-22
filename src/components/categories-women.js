@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function CategoriesWomen() {
     const [sortOption, setSortOption] = useState("Price");
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleSortOption = (option) => {
         setSortOption(option);
@@ -39,7 +44,7 @@ function CategoriesWomen() {
     return (
         <div className="bg-gray-100 rounded-sm py-6 px-4 sm:px-10 mt-6 ml-4 mr-4">
             <div className="flex flex-wrap items-center justify-between space-y-2 sm:space-y-0">
-                <div className="space-x-4">
+                <div className="space-x-4 ml-2 sm:ml-6">
                     <button onClick={navigateTomen}
                     className="bg-gray-200 text-black text-lg sm:text-2xl font-semibold px-3 py-2 rounded-md focus:outline-none">
                         Men
@@ -51,7 +56,7 @@ function CategoriesWomen() {
                 </div>
 
                 <div className="flex items-center space-x-2 relative">
-                    <span className="text-md sm:text-lg font-semibold">Sort by</span>
+                    <span className="text-md sm:text-lg font-semibold ml-2 sm:ml-3">Sort by</span>
                     <button
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="bg-gray-100 text-black text-md sm:text-lg font-semibold px-3 py-2 rounded-md focus:outline-none flex items-center space-x-1"

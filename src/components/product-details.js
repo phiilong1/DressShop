@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { CartContext } from './cartcontext';
 
 function ProductDetails() {
@@ -8,6 +8,10 @@ function ProductDetails() {
     const { addToCart } = useContext(CartContext);
     const product = location.state?.product;
     const [quantity, setQuantity] = useState(1);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     if (!product) {
         return <h1>Product not found!</h1>;
@@ -28,8 +32,9 @@ function ProductDetails() {
         navigate('/cart');
     };
 
+    
     return (
-        <div className="p-6 flex flex-col md:flex-row items-start md:items-center gap-6">
+        <div className="p-6 flex flex-col md:flex-row items-start md:items-center gap-6 mt-7">
             <img
                 src={product.image}
                 alt={product.name}

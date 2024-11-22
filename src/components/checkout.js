@@ -9,7 +9,7 @@ function CheckOut() {
     };
 
     return (
-        <div className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 mt-7">
             {/* Payment Method Section */}
             <div className="md:col-span-7 border p-4 sm:p-6 rounded-lg shadow-sm">
                 <h2 className="text-lg sm:text-xl font-bold mb-4">Payment Method</h2>
