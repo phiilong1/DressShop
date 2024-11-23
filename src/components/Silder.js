@@ -13,7 +13,7 @@ function Silder() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // 5 seconds
+        }, 3000); // 5 seconds
         return () => clearInterval(interval);
     }, [images.length]);
 

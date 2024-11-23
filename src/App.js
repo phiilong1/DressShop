@@ -18,10 +18,8 @@ function App() {
     return (
         <CartProvider>
             <div className="flex flex-col min-h-screen">
-                {/* Header luôn hiển thị */}
                 <Header />
 
-                {/* Nội dung chính */}
                 <div className="flex-grow">
                     <Routes>
                         <Route path="/login" element={<Login />} />
@@ -43,8 +41,6 @@ function App() {
                         <Route path="/checkout" element={<CheckOut />} />
                     </Routes>
                 </div>
-
-                {/* Footer luôn hiển thị */}
                 <Footer />
             </div>
         </CartProvider>
