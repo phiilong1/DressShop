@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "./cartcontext";
+import { useNavigate } from "react-router-dom";
 
 function CheckOut() {
     const { cart, removeFromCart } = useContext(CartContext);
+    const navigate = useNavigate();
 
     const calculateTotal = () => {
         return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -14,7 +16,6 @@ function CheckOut() {
             <div className="md:col-span-7 border p-4 sm:p-6 rounded-lg shadow-sm">
                 <h2 className="text-lg sm:text-xl font-bold mb-4">Payment Method</h2>
 
-                {/* Card Details */}
                 <div>
                     <label className="block text-sm font-medium mb-2">Card Details</label>
                     <input
@@ -39,7 +40,6 @@ function CheckOut() {
                     </button>
                 </div>
 
-                {/* Alternative Payment Methods */}
                 <div className="my-6 flex items-center">
                     <div className="flex-grow h-px bg-gray-300"></div>
                     <span className="px-4 text-gray-500">or</span>
@@ -70,7 +70,10 @@ function CheckOut() {
                                 key={item.id}
                                 className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4"
                             >
-                                <div className="flex items-center gap-4">
+                                <div
+                                    className="flex items-center gap-4 cursor-pointer"
+                                    onClick={() => navigate(`/product-details`, { state: { product: item } })}
+                                >
                                     <img
                                         src={item.image}
                                         alt={item.name}
@@ -87,7 +90,7 @@ function CheckOut() {
                                     </p>
                                     <button
                                         onClick={() => removeFromCart(item.id)}
-                                        className="text-sm text-red-500 hover:underline ml-4 sm:ml- 1"
+                                        className="text-sm text-red-500 hover:underline ml-4 sm:ml-1"
                                     >
                                         Delete
                                     </button>

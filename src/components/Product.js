@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 function Product() {
     const navigate = useNavigate(); // Hook để chuyển trang
     const allProducts = [
-        { id: 1, name: "Long Sleeves Polka Dots", price: 900, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
-        { id: 2, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
-        { id: 3, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
-        { id: 4, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
-        { id: 5, name: "Denim Jacket", price: 950, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
-        { id: 6, name: "Summer Dress", price: 850, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156196%2Fhefaqrcrdhxmabag1ozl.jpg&w=1080&q=75" },
-        { id: 7, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156228%2Fbumiptjx37aqwkez2x4o.jpg&w=1080&q=75" },
+        { id: 15, name: "Long Sleeves Polka Dots", price: 900, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158167%2Fsbiuoziiqi5gkuvrsymv.jpg&w=1080&q=75" },
+        { id: 16, name: "Brown Jacket", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156139%2Fnsmtzzw1gpn0l71w4mai.jpg&w=1080&q=75" },
+        { id: 17, name: "Sleeveless Shirt", price: 400, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581157604%2Fqfebd5mqwqcwbjsbehxr.jpg&w=1080&q=75" },
+        { id: 18, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 19, name: "Denim Jacket", price: 950, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
+        { id: 20, name: "Summer Dress", price: 850, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156196%2Fhefaqrcrdhxmabag1ozl.jpg&w=1080&q=75" },
+        { id: 21, name: "White Long Sleeves", price: 700, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156228%2Fbumiptjx37aqwkez2x4o.jpg&w=1080&q=75" },
     ];
 
     const [visibleProducts, setVisibleProducts] = useState(4); // Số sản phẩm hiển thị ban đầu

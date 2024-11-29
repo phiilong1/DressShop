@@ -6,7 +6,6 @@ function CategoriesMen() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
 
-    // Cuộn lên đầu trang khi component được render
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -17,12 +16,12 @@ function CategoriesMen() {
     };
 
     const products = [
-        { id: 1, name: "Classic Black Suit", price: 2000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
-        { id: 2, name: "Casual Denim Jacket", price: 1200, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1582456742%2Flongsleeves-hershel_mampai.jpg&w=1080&q=75" },
-        { id: 3, name: "Formal White Shirt", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
-        { id: 4, name: "Sporty Grey Hoodie", price: 1000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
-        { id: 5, name: "Blue Jeans", price: 600, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
-        { id: 6, name: "Brown Leather Shoes", price: 1500, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 9, name: "Classic Black Suit", price: 2000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 10, name: "Casual Denim Jacket", price: 1200, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1582456742%2Flongsleeves-hershel_mampai.jpg&w=1080&q=75" },
+        { id: 11, name: "Formal White Shirt", price: 800, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
+        { id: 12, name: "Sporty Grey Hoodie", price: 1000, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581156071%2Fo4rfktvywje4qbks9lkl.jpg&w=1080&q=75" },
+        { id: 13, name: "Blue Jeans", price: 600, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
+        { id: 14, name: "Brown Leather Shoes", price: 1500, image: "https://dress-shop.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjlbfjouc%2Fimage%2Fupload%2Fv1581158056%2Fdqtdtglewxjvig4x7rlk.jpg&w=1080&q=75" },
     ];
 
     const sortedProducts = [...products].sort((a, b) => {
